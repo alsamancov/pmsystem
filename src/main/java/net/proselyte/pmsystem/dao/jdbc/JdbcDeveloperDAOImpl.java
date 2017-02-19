@@ -1,6 +1,7 @@
 package net.proselyte.pmsystem.dao.jdbc;
 
 import net.proselyte.pmsystem.dao.DeveloperDAO;
+import net.proselyte.pmsystem.dao.GenericDAO;
 import net.proselyte.pmsystem.model.Developer;
 
 import java.sql.ResultSet;
@@ -13,7 +14,9 @@ import static net.proselyte.pmsystem.util.ConnectionUtil.*;
 
 
 /**
- * Created by Alexey on 02/19/2017.
+ * Implementation of {@link GenericDAO} interface for class {@link Developer}
+ *
+ * @author Oleksii Samantsov
  */
 public class JdbcDeveloperDAOImpl implements DeveloperDAO {
     private static final String INSERT_NEW = "INSERT INTO developers(firstName, lastName, age, salary, yearsOfExperience, experience, id) VALUES (?, ?, ?, ?, ?, ?, ?)";
